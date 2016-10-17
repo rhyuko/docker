@@ -4,7 +4,4 @@ MAINTAINER Rhyuko <rvolhuer@gmail.com>
 RUN apt-get update
 RUN apt-get upgrade -y
 
-RUN apt-get install -y ruby-full
-
-RUN gem update --system
-RUN gem install compass
+RUN apt-get install -y ruby-compass
