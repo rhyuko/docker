@@ -8,6 +8,10 @@ RUN apt-get install -y curl ssmtp g++ libxml2-dev libfreetype6-dev libjpeg62-tur
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install gd exif
 
+RUN apt-get install -y zlib1g-dev libicu-dev
+RUN docker-php-ext-configure intl
+RUN docker-php-ext-install intl
+
 RUN apt-get install -y php5-mysql
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
