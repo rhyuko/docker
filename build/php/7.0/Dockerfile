@@ -12,6 +12,9 @@ RUN apt-get install -y zlib1g-dev libicu-dev
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-install intl
 
+RUN apt-get install -y libxslt-dev
+RUN docker-php-ext-install xsl
+
 RUN apt-get install -y php5-mysql
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
