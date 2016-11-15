@@ -1,6 +1,8 @@
 FROM php:7.0-fpm
 MAINTAINER Rhyuko <rvolhuer@gmail.com>
 
+RUN usermod -u 1000 www-data
+
 RUN apt-get update
 RUN apt-get upgrade -y
 
