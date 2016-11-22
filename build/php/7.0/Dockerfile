@@ -23,6 +23,10 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN apt-get install -y libmcrypt-dev
 RUN docker-php-ext-install mcrypt
 
+RUN apt-get install -y libicu-dev
+RUN pecl install intl
+RUN docker-php-ext-install intl
+
 RUN docker-php-ext-configure opcache --enable-opcache
 RUN docker-php-ext-install opcache
 
