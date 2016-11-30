@@ -6,7 +6,7 @@ RUN usermod -u 1000 www-data
 RUN apt-get update
 RUN apt-get upgrade -y
 
-RUN apt-get install -y curl ssmtp g++ libxml2-dev libfreetype6-dev libjpeg62-turbo-dev libpng12-dev libgd-dev
+RUN apt-get install -y curl sendmail ssmtp g++ libxml2-dev libfreetype6-dev libjpeg62-turbo-dev libpng12-dev libgd-dev
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install gd exif
 
