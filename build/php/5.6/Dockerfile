@@ -22,3 +22,5 @@ RUN docker-php-ext-install opcache
 RUN docker-php-ext-install zip soap
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=1.2.0
+
+RUN ls -la /usr/sbin/sendmail
